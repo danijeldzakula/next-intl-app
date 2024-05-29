@@ -1,7 +1,8 @@
 import { type MetadataRoute } from 'next';
 
 import { defaultLocale, host, type locales, pathnames } from '@/config';
-import { getPathname } from '@/navigation';
+
+// import { getPathname } from '@/navigation';
 
 type changeFrequency =
   | 'always'
@@ -17,11 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const keys = Object.keys(pathnames) as Array<keyof typeof pathnames>;
 
   const getUrl = (
-    key: keyof typeof pathnames,
+    href: keyof typeof pathnames,
     locale: (typeof locales)[number]
   ) => {
-    const pathname = getPathname({ locale, href: key });
-    return `${host}/${locale}${pathname === '/' ? '' : pathname}`;
+    // const pathname = getPathname({ locale, href });
+    const pathname = '/';
+    return `${host}/${locale}${pathname === '/' ? href : pathname}`;
   };
 
   return keys.map((key) => ({
