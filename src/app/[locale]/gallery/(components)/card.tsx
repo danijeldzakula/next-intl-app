@@ -4,6 +4,7 @@ import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 
+import { pathnames } from '@/config';
 import { type IImages } from '@/types/gallery';
 
 type IProps = {
@@ -11,16 +12,24 @@ type IProps = {
   showLink?: boolean;
 };
 
+type IGalleryPath = {
+  en: string;
+  de: string;
+};
+
 export default function Card({ item, showLink = true }: IProps) {
   const locale = useLocale();
+
+  const galleryPathname = pathnames['/gallery'];
+  const href = `/${locale}${galleryPathname[locale as keyof IGalleryPath]}/${item.id}`;
 
   return (
     <article className="card__item relative">
       {showLink ? (
         <Link
           scroll={false}
+          href={href}
           className="absolute inset-0 z-[3] h-full w-full"
-          href={`/${locale}/gallery/${item.id}`}
         >
           <span className="sr-only">{item.author}</span>
         </Link>

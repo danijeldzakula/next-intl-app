@@ -1,13 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 import React from 'react';
 
+import BackButton from '@/components/back-button';
 import { Container, Layout, Section, SeoTitle } from '@/components/layouts';
 
 import ArrowIcon from '@/icons/arrow';
 import { images } from '@/shared/images-data';
 
 import Card from '../(components)/card';
-import BackButton from './(components)/back-button';
 
 type IProps = {
   params: {
