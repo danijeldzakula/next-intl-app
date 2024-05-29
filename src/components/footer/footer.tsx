@@ -1,7 +1,7 @@
 import { Link } from '@/navigation';
 
 import ExternalLink from '../external-link';
-import LanguageSwitcher from '../language-switcher';
+import LangSwitch from '../lang-switch';
 import { Container } from '../layouts';
 import LinksToggle from '../links-toggle';
 
@@ -138,7 +138,7 @@ export default function Footer() {
         <div className="my-10 border-b border-zinc-900" />
 
         <div className="pb-10">
-          <LanguageSwitcher />
+          <LangSwitch />
         </div>
 
         <div>

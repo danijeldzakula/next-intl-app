@@ -34,6 +34,12 @@ export default function NavBar({ className, onClose }: IProps) {
             {t('contact')}
           </NavLink>
         </li>
+
+        <li>
+          <NavLink onClick={onClose} href="/blog">
+            Blog
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
