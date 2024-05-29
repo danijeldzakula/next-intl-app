@@ -30,26 +30,8 @@ export default function NavBar({ className, onClose }: IProps) {
         </li>
 
         <li>
-          <NavLink onClick={onClose} href="/">
-            Our Services
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink onClick={onClose} href="/">
-            Products
-          </NavLink>
-        </li>
-
-        <li>
           <NavLink onClick={onClose} href="/contact">
             {t('contact')}
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink onClick={onClose} href="/gallery">
-            Gallery
           </NavLink>
         </li>
       </ul>

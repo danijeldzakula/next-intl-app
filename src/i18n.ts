@@ -5,7 +5,11 @@ import { locales } from '@/config';
 
 export type Locale = (typeof locales)[number];
 
-export default getRequestConfig(async ({ locale }: { locale: string }) => {
+type IProps = {
+  locale: string;
+};
+
+export default getRequestConfig(async ({ locale }: IProps) => {
   if (!locales.includes(locale as Locale)) notFound();
 
   return {

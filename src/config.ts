@@ -12,14 +12,5 @@ export const pathnames = {
     en: '/contact',
     de: '/kontakt',
   },
-  '/gallery': {
-    en: '/gallery',
-    de: '/galerie',
-  },
-  '/gallery/[id]': {
-    en: '/gallery/[id]',
-    de: '/galerie/[id]',
-  },
-  '[...rest]': '[...rest]',
 } satisfies Pathnames<typeof locales>;
 export type AppPathnames = keyof typeof pathnames;

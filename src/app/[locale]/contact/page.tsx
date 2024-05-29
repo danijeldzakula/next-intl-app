@@ -2,11 +2,11 @@ import { getTranslations } from 'next-intl/server';
 
 import { Layout } from '@/components/layouts';
 
+import { type IParamsLocale } from '@/types';
+
 import Posts from './(sections)/posts';
 
-type IProps = {
-  params: { locale: string };
-};
+type IProps = IParamsLocale;
 
 export async function generateMetadata({ params: { locale } }: IProps) {
   const t = await getTranslations({ locale, namespace: 'IndexPage' });

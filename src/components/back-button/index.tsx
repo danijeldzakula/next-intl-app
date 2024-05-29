@@ -13,10 +13,11 @@ type IProps = {
 };
 
 export default function BackButton({ className, ...rest }: IProps) {
-  const { handleClose } = useBack();
+  const { isPending, handleClose } = useBack();
 
   return (
     <button
+      disabled={isPending}
       type="button"
       className={clsx(className)}
       onClick={handleClose}
