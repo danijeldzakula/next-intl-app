@@ -27,8 +27,9 @@ export default function SingleBlogPage({
       <Section>
         <Container>
           <div className="flex gap-4">
-            <BackButton className="bg-neutral-950 px-4 py-2">
+            <BackButton className="relative bg-neutral-950 px-4 py-2">
               <ArrowIcon className="rotate-180" />
+              <span className="sr-only">Back</span>
             </BackButton>
             <SeoTitle>Single Blog Post: {slug}</SeoTitle>
           </div>
