@@ -1,0 +1,25 @@
+{
+  "IndexPage": {
+    "title": "Home",
+    "description": "Home"
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "description": "Contact"
+  },
+  "NotFoundPage": {
+    "title": "Page not found En",
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": {
+      "en": "English",
+      "de": "Germany "
+    }
+  },
+  "Navigation": {
+    "home": "Home",
+    "contact": "Contact"
+  }
+}

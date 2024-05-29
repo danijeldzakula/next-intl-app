@@ -1,0 +1,49 @@
+{
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "@typescript-eslint/no-namespace": "off"
+  },
+  "parser": "@typescript-eslint/parser",
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "prettier.config.cjs",
+    ".eslintrc.cjs"
+  ],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@public/*": ["./public/*"]
+    },
+    "incremental": false
+  },
+  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  }
+}

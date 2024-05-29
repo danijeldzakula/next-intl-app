@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-padding: 0;
+}
+
+@layer base {
+  html {
+    touch-action: manipulation;
+    @apply min-h-screen scroll-pt-20  overflow-y-scroll bg-white dark:bg-zinc-900;
+  }
+
+  select {
+    @apply !appearance-none;
+  }
+
+  .__app__ {
+    @apply relative grid min-h-[100svh] w-full grid-rows-[auto_1fr_auto];
+  }
+
+  .card__item {
+    @apply relative flex-grow basis-[100%] cursor-pointer overflow-hidden rounded-sm bg-zinc-100 shadow-lg transition-shadow duration-300 hover:shadow-none md:basis-[calc(50%-1rem)] lg:basis-[calc(33.333%-1rem)] xl:basis-[calc(25%-1rem)] dark:bg-neutral-950;
+  }
+}
+
+@layer utilities {
+  .gradient--lime {
+    @apply bg-gradient-to-r from-lime-600 to-lime-900;
+  }
+
+  .gradient--indigo {
+    @apply bg-gradient-to-r from-purple-600 to-purple-900;
+  }
+
+  .grid__wrapper > .card__item {
+    @apply last:col-span-full;
+  }
+
+  .overflow-y-clip {
+    overflow-y: clip;
+  }
+}
+
+@layer components {
+  /* Start - Toggle Theme Switch */
+  .toogle__theme--slider {
+    @apply absolute h-full w-full rounded-sm transition-all duration-300 ease-in-out before:absolute before:top-1 before:clear-both before:h-5 before:w-5 before:translate-x-[7px] before:rounded-full before:shadow-moonShadow before:transition-all before:duration-300 before:ease-in-out before:content-[''];
+  }
+
+  [aria-checked='true'] ~ .toogle__theme--slider {
+    @apply before:translate-x-[37px] before:bg-white before:shadow-none;
+  }
+  /* END - Toggle Theme Switch */
+}
