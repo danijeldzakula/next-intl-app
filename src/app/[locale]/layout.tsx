@@ -29,14 +29,14 @@ export const viewport: Viewport = {
   themeColor: '#412203',
 };
 
-export function generateMetadata() {
-  const metadataBase = new URL(`https://next-intl-app.vercel.app`);
+export function generateMetadata({ params: { locale } }: IProps) {
+  const metadataBase = new URL('https://next-intl-app.vercel.app');
 
   return {
     manifest: '/manifest.json',
     metadataBase: metadataBase,
     alternates: {
-      canonical: '/',
+      canonical: '/' + locale,
     },
     robots: {
       index: true,
