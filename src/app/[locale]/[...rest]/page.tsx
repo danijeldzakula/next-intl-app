@@ -1,11 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-import { type IParamsLocale } from '@/types';
+import { type TParamsLocale } from '@/types';
 
-type IProps = IParamsLocale;
+type TProps = TParamsLocale;
 
-export async function generateMetadata({ params: { locale } }: IProps) {
+export async function generateMetadata({ params: { locale } }: TProps) {
   const t = await getTranslations({ locale, namespace: 'NotFoundPage' });
 
   return {

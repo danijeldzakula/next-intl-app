@@ -5,12 +5,12 @@ import { useEffect } from 'react';
 
 import { Container, Layout, Section } from '@/components/layouts';
 
-type IProps = {
+type TProps = {
   error: Error;
   reset(): void;
 };
 
-export default function Error({ error, reset }: IProps) {
+export default function Error({ error, reset }: TProps) {
   const t = useTranslations('NotFoundPage');
 
   useEffect(() => {

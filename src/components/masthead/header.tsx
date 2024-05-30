@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import React from 'react';
 
-import { type IGlobalProps } from '@/types';
+import { type TGlobalProps } from '@/types';
 
 import { Container } from '../layouts';
 import NavLink from '../nav-link';
@@ -15,13 +15,13 @@ const ThemeToggle = dynamic(() => import('@/components/theme-toggle'), {
   ),
 });
 
-type IProps = IGlobalProps & {
+type TProps = TGlobalProps & {
   open?: boolean;
   onToggle: () => void;
   onClose: () => void;
 };
 
-export default function Header({ open, onToggle, onClose }: IProps) {
+export default function Header({ open, onToggle, onClose }: TProps) {
   return (
     <header className="gradient--indigo fixed left-0 right-0 top-0 z-10 grid h-16 w-full items-center lg:h-20">
       <Container>

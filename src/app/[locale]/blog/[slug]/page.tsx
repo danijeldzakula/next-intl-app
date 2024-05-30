@@ -4,11 +4,11 @@ import BackButton from '@/components/back-button';
 import { Container, Layout, Section, SeoTitle } from '@/components/layouts';
 
 import ArrowIcon from '@/icons/arrow';
-import { type IParamsLocale } from '@/types';
+import { type TParamsLocale } from '@/types';
 
-type IProps = IParamsLocale;
+type TProps = TParamsLocale;
 
-export async function generateMetadata({ params: { locale } }: IProps) {
+export async function generateMetadata({ params: { locale } }: TProps) {
   const t = await getTranslations({ locale, namespace: 'IndexPage' });
 
   return {

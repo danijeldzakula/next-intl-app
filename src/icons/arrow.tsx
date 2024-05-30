@@ -1,8 +1,8 @@
 import { type SVGAttributes } from 'react';
 
-type IProps = SVGAttributes<SVGElement>;
+type TProps = SVGAttributes<SVGElement>;
 
-export default function ArrowIcon({ ...rest }: IProps) {
+export default function ArrowIcon({ ...rest }: TProps) {
   return (
     <svg
       width="8"

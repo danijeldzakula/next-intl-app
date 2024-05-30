@@ -7,13 +7,13 @@ import { ReactQueryHydrate } from '@/components/query/query-hydrate';
 import getQueryClient from '@/utils/query-client';
 
 import { getPosts } from '@/services/post-services';
-import { type IChildren } from '@/types';
+import { type TChildren } from '@/types';
 
-type IProps = IChildren & {
+type TProps = TChildren & {
   params: { locale: string };
 };
 
-export async function generateMetadata({ params: { locale } }: IProps) {
+export async function generateMetadata({ params: { locale } }: TProps) {
   const t = await getTranslations({ locale, namespace: 'IndexPage' });
 
   return {
@@ -22,7 +22,7 @@ export async function generateMetadata({ params: { locale } }: IProps) {
   };
 }
 
-export default async function QueryLayout({ children }: IChildren) {
+export default async function QueryLayout({ children }: TChildren) {
   const queryClient = getQueryClient();
 
   await queryClient.prefetchInfiniteQuery({

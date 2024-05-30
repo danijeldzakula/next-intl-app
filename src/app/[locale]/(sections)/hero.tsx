@@ -7,11 +7,11 @@ import clsx from 'clsx';
 
 import { Container, Section, SeoTitle } from '@/components/layouts';
 
-import { type IGlobalProps } from '@/types';
+import { type TGlobalProps } from '@/types';
 
-type IProps = IGlobalProps;
+type TProps = TGlobalProps;
 
-export default function Hero({ className }: IProps) {
+export default function Hero({ className }: TProps) {
   const t = useTranslations('IndexPage');
 
   return (

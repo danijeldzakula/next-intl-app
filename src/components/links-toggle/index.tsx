@@ -5,14 +5,14 @@ import React, { useCallback, useState } from 'react';
 import clsx from 'clsx';
 
 import ArrowIcon from '@/icons/arrow';
-import { type IGlobalProps } from '@/types';
+import { type TGlobalProps } from '@/types';
 
-type IProps = IGlobalProps & {
+type TProps = TGlobalProps & {
   show?: boolean;
   title: string;
 };
 
-export default function LinksToggle({ show = false, title, children }: IProps) {
+export default function LinksToggle({ show = false, title, children }: TProps) {
   const [isVisible, setIsVisible] = useState(show);
 
   const handleOpen = useCallback(() => {

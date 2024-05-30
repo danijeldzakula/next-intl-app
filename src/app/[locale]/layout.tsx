@@ -13,11 +13,11 @@ import MastHead from '@/components/masthead';
 import QueryProvider from '@/components/query/query-provider';
 
 import { locales } from '@/config';
-import { type IChildren } from '@/types';
+import { type TChildren } from '@/types';
 
 const workSans = Work_Sans({ subsets: ['latin'] });
 
-type IProps = IChildren & {
+type TProps = TChildren & {
   params: { locale: string };
 };
 
@@ -29,7 +29,7 @@ export const viewport: Viewport = {
   themeColor: '#412203',
 };
 
-export function generateMetadata({ params: { locale } }: IProps) {
+export function generateMetadata({ params: { locale } }: TProps) {
   const metadataBase = new URL('https://next-intl-app.vercel.app');
 
   return {
@@ -57,7 +57,7 @@ export function generateMetadata({ params: { locale } }: IProps) {
 export default async function LocaleLayout({
   children,
   params: { locale },
-}: IProps) {
+}: TProps) {
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
 

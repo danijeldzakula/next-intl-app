@@ -7,11 +7,11 @@ import { type Locale } from 'node_modules/next/dist/compiled/@vercel/og/satori';
 
 import { Container, Section, SeoTitle } from '@/components/layouts';
 
-import { type IGlobalProps } from '@/types';
+import { type TGlobalProps } from '@/types';
 
-type IProps = IGlobalProps;
+type TProps = TGlobalProps;
 
-export default function Hero({ className }: IProps) {
+export default function Hero({ className }: TProps) {
   const locale = useLocale() as Locale;
   unstable_setRequestLocale(locale);
   const t = useTranslations('ContactPage');

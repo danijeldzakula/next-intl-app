@@ -6,13 +6,13 @@ import clsx from 'clsx';
 
 import useBack from '@/hooks/useBack';
 
-type IProps = {
+type TProps = {
   className?: string;
   rest?: HTMLButtonElement;
   children?: ReactNode;
 };
 
-export default function BackButton({ className, ...rest }: IProps) {
+export default function BackButton({ className, ...rest }: TProps) {
   const { isPending, handleClose } = useBack();
 
   return (

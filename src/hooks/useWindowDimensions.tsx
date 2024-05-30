@@ -1,14 +1,14 @@
 import { useCallback, useEffect, useState } from 'react';
 
-type IProps = {
+type TProps = {
   width: number | null;
   height: number | null;
 };
 
 const HAS_WINDOW: boolean = typeof window !== 'undefined';
 
-export default function useWindowDimensions(): IProps {
-  const getWindowDimensions = (): IProps => {
+export default function useWindowDimensions(): TProps {
+  const getWindowDimensions = (): TProps => {
     const width = HAS_WINDOW ? window.innerWidth : null;
     const height = HAS_WINDOW ? window.innerHeight : null;
 
@@ -18,7 +18,7 @@ export default function useWindowDimensions(): IProps {
     };
   };
 
-  const [windowDimensions, setWindowDimensions] = useState<IProps>(
+  const [windowDimensions, setWindowDimensions] = useState<TProps>(
     getWindowDimensions()
   );
 

@@ -1,9 +1,9 @@
-import { type IChildren } from '@/types';
+import { type TChildren } from '@/types';
 
 import './globals.css';
 
-type IProps = IChildren;
+type TProps = TChildren;
 
-export default function RootLayout({ children }: IProps) {
+export default function RootLayout({ children }: TProps) {
   return children;
 }

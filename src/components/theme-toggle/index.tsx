@@ -5,11 +5,11 @@ import { useCallback } from 'react';
 
 import clsx from 'clsx';
 
-import { type IGlobalProps } from '@/types';
+import { type TGlobalProps } from '@/types';
 
-type IProps = IGlobalProps;
+type TProps = TGlobalProps;
 
-export default function ThemeToggle({ className }: IProps) {
+export default function ThemeToggle({ className }: TProps) {
   const { theme, systemTheme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
   const checked = currentTheme === 'dark';

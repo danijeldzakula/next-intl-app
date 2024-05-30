@@ -2,13 +2,13 @@ import { getTranslations } from 'next-intl/server';
 
 import { Layout } from '@/components/layouts';
 
-import { type IParamsLocale } from '@/types';
+import { type TParamsLocale } from '@/types';
 
 import Posts from './(sections)/posts';
 
-type IProps = IParamsLocale;
+type TProps = TParamsLocale;
 
-export async function generateMetadata({ params: { locale } }: IProps) {
+export async function generateMetadata({ params: { locale } }: TProps) {
   const t = await getTranslations({ locale, namespace: 'IndexPage' });
 
   return {

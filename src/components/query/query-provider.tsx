@@ -6,11 +6,11 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { queryClientOptions } from '@/utils/query-client';
 
-import { type IChildren } from '@/types';
+import { type TChildren } from '@/types';
 
-type IProps = IChildren;
+type TProps = TChildren;
 
-const QueryProvider = ({ children }: IProps) => {
+const QueryProvider = ({ children }: TProps) => {
   const [queryClient] = useState(() => new QueryClient(queryClientOptions));
 
   return (

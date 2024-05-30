@@ -3,16 +3,16 @@ import React from 'react';
 
 import clsx from 'clsx';
 
-import { type IGlobalProps } from '@/types';
+import { type TGlobalProps } from '@/types';
 
 import NavLink from '../nav-link';
 
-type IProps = IGlobalProps & {
+type TProps = TGlobalProps & {
   open?: boolean;
   onClose?: () => void;
 };
 
-export default function NavBar({ className, onClose }: IProps) {
+export default function NavBar({ className, onClose }: TProps) {
   const t = useTranslations('Navigation');
 
   return (
