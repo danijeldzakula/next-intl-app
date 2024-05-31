@@ -48,7 +48,7 @@ export default function MastHead() {
   }, [isVisible, width]);
 
   return (
-    <div className="relative left-0 right-0 top-0 z-10 h-16 w-full items-center lg:h-20">
+    <div className="relative left-0 right-0 top-0 z-[52] h-16 w-full lg:h-20">
       <Header open={isVisible} onToggle={handleToggle} onClose={handleClose} />
 
       <NavBar
