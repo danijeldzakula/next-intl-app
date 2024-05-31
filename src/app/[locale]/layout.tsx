@@ -42,15 +42,15 @@ export function generateMetadata({ params: { locale } }: TProps) {
       index: true,
       follow: true,
     },
-    openGraph: {
-      images: [
-        {
-          url: 'opengraph-image.jpg',
-          width: 1200,
-          height: 630,
-        },
-      ],
-    },
+    // openGraph: {
+    //   images: [
+    //     {
+    //       url: 'opengraph-image.jpg',
+    //       width: 1200,
+    //       height: 630,
+    //     },
+    //   ],
+    // },
   };
 }
 
