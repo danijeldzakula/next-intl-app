@@ -31,10 +31,11 @@ export default function BlogBlock({ data, locale }: TProps) {
                     <h2 className="text-xl">{blog.title}</h2>
                     <div className="flex justify-start">
                       <Link
-                        className="flex items-center gap-4 bg-white px-4 dark:bg-neutral-800"
+                        className="relative flex items-center gap-4 bg-white px-4 dark:bg-neutral-800"
                         href={`/${locale}/blog/${blog.slug}`}
                       >
                         <span>Read More</span>
+                        <span className="sr-only">{blog.title}</span>
                         <span className="block py-4">
                           <ArrowIcon className="h-4 w-4" />
                         </span>
