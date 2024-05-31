@@ -14,7 +14,7 @@ export default function Card({
   post: PostType;
 }) {
   return (
-    <div className={clsx('card__item', className)}>
+    <article className={clsx('card__item', className)}>
       <Figure className="h-40 w-full bg-black/15 dark:bg-white/15" />
 
       <div className="grid items-start justify-start gap-6 px-4 py-6">
@@ -25,6 +25,6 @@ export default function Card({
           {trimText({ text: post.body, maxLength: 140 })}
         </p>
       </div>
-    </div>
+    </article>
   );
 }

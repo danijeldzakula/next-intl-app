@@ -6,7 +6,11 @@ import { Container, Layout, Section, SeoTitle } from '@/components/layouts';
 import ArrowIcon from '@/icons/arrow';
 import { type TParamsLocale } from '@/types';
 
-type TProps = TParamsLocale;
+type TProps = TParamsLocale & {
+  params: {
+    slug: string;
+  };
+};
 
 export async function generateMetadata({ params: { locale } }: TProps) {
   const t = await getTranslations({ locale, namespace: 'IndexPage' });
@@ -17,21 +21,21 @@ export async function generateMetadata({ params: { locale } }: TProps) {
   };
 }
 
-export default function SingleBlogPage({
-  params: { slug },
-}: {
-  params: { slug: string };
-}) {
+export default function SingleBlogPage({ params: { slug } }: TProps) {
+  function textNormalize(title: string): string {
+    return title.replaceAll('-', ' ');
+  }
+
   return (
     <Layout>
       <Section>
         <Container>
-          <div className="flex gap-4">
-            <BackButton className="relative bg-neutral-950 px-4 py-2">
-              <ArrowIcon className="rotate-180" />
+          <div className="flex">
+            <BackButton className="relative bg-transparent px-4 py-2">
+              <ArrowIcon className="h-5 w-5 rotate-180" />
               <span className="sr-only">Back</span>
             </BackButton>
-            <SeoTitle>Single Blog Post: {slug}</SeoTitle>
+            <SeoTitle className="capitalize">{textNormalize(slug)}</SeoTitle>
           </div>
         </Container>
       </Section>

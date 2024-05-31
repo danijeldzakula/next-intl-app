@@ -8,7 +8,7 @@ export function Layout({ className, children }: TProps) {
   return (
     <main
       className={clsx(
-        'relative [&>section]:pt-20 last:[&>section]:pb-20',
+        'relative bg-white dark:bg-zinc-900 [&>section]:pt-20 last:[&>section]:pb-20',
         className
       )}
     >
