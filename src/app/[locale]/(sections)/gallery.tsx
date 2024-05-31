@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import React from 'react';
 
-import galleryOne from '@public/assets/images/gallery_1.jpeg';
-import galleryTwo from '@public/assets/images/gallery_2.avif';
-import galleryThree from '@public/assets/images/gallery_3.avif';
+import galleryOne from '@public/images/gallery_1.jpeg';
+import galleryTwo from '@public/images/gallery_2.avif';
+import galleryThree from '@public/images/gallery_3.avif';
+import galleryFour from '@public/images/seo/opengraph-image.jpg';
 
 import { Container, Section } from '@/components/layouts';
 
@@ -72,7 +73,7 @@ export default function Gallery() {
                 width={843}
                 height={320}
                 quality={70}
-                src={galleryTwo.src}
+                src={galleryFour.src}
                 className="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110"
                 alt="Photo by Minh Pham"
               />

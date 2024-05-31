@@ -45,9 +45,9 @@ export function generateMetadata({ params: { locale } }: TProps) {
     openGraph: {
       images: [
         {
-          url: 'opengraph-image.jpg',
           width: 1200,
           height: 630,
+          url: 'images/seo/opengraph-image.jpg',
         },
       ],
     },
@@ -64,9 +64,9 @@ export default async function LocaleLayout({
   return (
     <html suppressHydrationWarning={true} lang={locale}>
       <body className={clsx(workSans.className)}>
-        <QueryProvider>
-          <ThemeProvider enableSystem={true} attribute="class">
-            <NextIntlClientProvider messages={messages}>
+        <ThemeProvider enableSystem={true} attribute="class">
+          <NextIntlClientProvider messages={messages}>
+            <QueryProvider>
               <NextTopLoader color="white" height={3} showSpinner={false} />
 
               <div className="__app__">
@@ -75,9 +75,9 @@ export default async function LocaleLayout({
                 <Footer />
                 <BackToTop />
               </div>
-            </NextIntlClientProvider>
-          </ThemeProvider>
-        </QueryProvider>
+            </QueryProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
