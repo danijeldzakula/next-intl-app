@@ -61,6 +61,8 @@ export default function Header() {
               <div className="flex items-center gap-2 md:hidden">
                 <span className="block h-10 w-10 rounded-full bg-white dark:bg-neutral-800" />
               </div>
+
+              <span className="sr-only">SIGN IN/UP</span>
             </AuthButton>
           </div>
         </div>
