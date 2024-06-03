@@ -15,7 +15,7 @@ type TProps = {
 
 export default function BlogBlock({ data, locale }: TProps) {
   return (
-    <Section className="!pt-0">
+    <Section>
       <Container>
         <div className="flex flex-wrap gap-x-4 gap-y-8">
           <Suspense fallback={<Loading fill={5} />}>

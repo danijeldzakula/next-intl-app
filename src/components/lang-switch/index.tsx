@@ -34,7 +34,7 @@ export default function LangSwitch() {
             disabled={isPending}
             onClick={() => handleClick(loc)}
             className={clsx(
-              'p-2 uppercase text-white',
+              'p-2 uppercase text-black dark:text-white',
               locale === loc ? 'font-bold' : ''
             )}
           >

@@ -22,7 +22,7 @@ export async function generateMetadata({ params: { locale } }: TProps) {
 export default function BlogPage({ params: { locale } }: TProps) {
   return (
     <Layout>
-      <Hero />
+      <Hero className="hidden" />
 
       <BlogBlock data={blogs} locale={locale} />
     </Layout>

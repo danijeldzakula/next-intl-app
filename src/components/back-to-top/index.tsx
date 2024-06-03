@@ -45,7 +45,7 @@ export default function BackToTop() {
           type="button"
           onClick={scrollToTop}
           className={clsx(
-            'absolute bottom-4 right-4 z-[49] h-12 w-12 translate-y-[150px] rounded-sm bg-zinc-800 p-0 opacity-70 shadow-lg backdrop-blur-lg transition-[opacity_transform] duration-200 hover:opacity-100 lg:bottom-14 lg:right-6',
+            'absolute bottom-4 right-4 z-[49] h-12 w-12 translate-y-[150px] rounded-sm bg-white p-0 opacity-70 shadow-xl transition-transform duration-200 hover:opacity-100 lg:bottom-14 lg:right-6 dark:bg-zinc-900',
             isVisible ? '!translate-y-0' : '',
             isAuthOpen || isNavbarOpen ? 'hidden' : 'block'
           )}
@@ -54,7 +54,7 @@ export default function BackToTop() {
             <ArrowIcon
               width={22}
               height={22}
-              className="-rotate-90 text-white"
+              className="-rotate-90 text-black dark:text-white"
             />
           </span>
           <span className="sr-only">Back</span>

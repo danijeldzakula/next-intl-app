@@ -23,7 +23,7 @@ export default function Header() {
   const { isNavbarOpen, handleNavbarOpen } = useMastheadStore();
 
   return (
-    <header className="gradient--indigo sticky left-0 right-0 top-0 z-[11] grid h-16 w-full items-center lg:h-20">
+    <header className="gradient--indigo sticky left-0 right-0 top-0 z-[11] grid h-16 w-full items-center border-b lg:h-20">
       <Container>
         <div className="grid auto-cols-max grid-flow-col items-center justify-between lg:grid-cols-[201px_auto_201px]">
           <div className="grid grid-cols-[40px_auto] items-center gap-4">
@@ -44,7 +44,7 @@ export default function Header() {
               href="/"
               className="inline-flex !px-0 py-0 text-2xl text-white hover:text-white dark:text-white hover:dark:text-white"
             >
-              <span>Creative</span>
+              <span>Story</span>
             </NavLink>
           </div>
 
@@ -53,7 +53,7 @@ export default function Header() {
           <MobileNavbar />
 
           <div className="flex items-center gap-4">
-            <ThemeToggle className="hidden sm:block" />
+            <ThemeToggle />
 
             <AuthButton className="relative h-10 rounded-[50px] font-semibold uppercase text-white md:w-auto md:px-3">
               <span className="hidden tracking-wider md:block">SIGN IN/UP</span>

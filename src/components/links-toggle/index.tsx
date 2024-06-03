@@ -24,7 +24,7 @@ export default function LinksToggle({ show = false, title, children }: TProps) {
       <button
         type="button"
         className={clsx(
-          "after:gradient--indigo relative mb-5 flex w-full items-center justify-between text-left text-[20px] text-white after:absolute after:-bottom-2.5 after:left-0 after:clear-both after:h-[2px] after:w-16 after:transition-[width] after:duration-200 after:content-[''] md:hidden",
+          "after:gradient--indigo relative mb-5 flex w-full items-center justify-between text-left text-[20px] text-black after:absolute after:-bottom-2.5 after:left-0 after:clear-both after:h-[2px] after:w-16 after:transition-[width] after:duration-200 after:content-[''] md:hidden dark:text-white",
           isVisible ? 'after:w-32' : ''
         )}
         onClick={handleOpen}
@@ -40,13 +40,13 @@ export default function LinksToggle({ show = false, title, children }: TProps) {
         </span>
       </button>
 
-      <h3 className="after:gradient--indigo relative mb-5 hidden w-full items-center justify-between text-left text-[20px] text-white after:absolute after:-bottom-2.5 after:left-0 after:clear-both after:h-[2px] after:w-16 after:content-[''] md:flex">
+      <h3 className="after:gradient--indigo relative mb-5 hidden w-full items-center justify-between text-left text-[20px] text-black after:absolute after:-bottom-2.5 after:left-0 after:clear-both after:h-[2px] after:w-16 after:content-[''] md:flex dark:text-white">
         <span>{title}</span>
       </h3>
 
       <ul
         className={clsx(
-          'grid gap-2 [&>li>a]:block [&>li>a]:py-1 [&>li]:text-zinc-400',
+          'grid gap-2 [&>li>a]:block [&>li>a]:py-1 [&>li]:text-zinc-600 [&>li]:dark:text-zinc-400',
           !isVisible ? 'hidden md:grid' : ''
         )}
       >
