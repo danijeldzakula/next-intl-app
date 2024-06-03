@@ -45,7 +45,7 @@ export default function MobileNavbar() {
       <NavBar
         hasMobile={true}
         className={clsx(
-          'fixed bottom-0 left-0 top-0 z-[51] w-full max-w-md -translate-x-full bg-white shadow-lg transition-transform duration-200 dark:bg-neutral-900 [&>ul>li]:mt-4 [&>ul>li]:border-t [&>ul>li]:pt-4 first:[&>ul>li]:mt-0 first:[&>ul>li]:border-t-0 [&>ul]:grid [&>ul]:gap-0',
+          'fixed bottom-0 left-0 top-0 z-[51] w-[85%] max-w-md -translate-x-full bg-white shadow-lg transition-transform duration-200 dark:bg-neutral-900 [&>ul>li]:mt-4 [&>ul>li]:border-t [&>ul>li]:pt-4 first:[&>ul>li]:mt-0 first:[&>ul>li]:border-t-0 [&>ul]:grid [&>ul]:gap-0',
           isNavbarOpen ? 'translate-x-0' : ''
         )}
       />
