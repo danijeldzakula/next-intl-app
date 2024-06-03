@@ -20,8 +20,14 @@ export default function ThemeToggle({ className }: TProps) {
 
   return (
     <div className={clsx('relative h-7 w-16', className)}>
-      <label className="absolute h-full w-full cursor-pointer rounded-[50px] bg-white shadow-md transition-colors duration-300 ease-in-out dark:bg-zinc-800">
+      <label
+        htmlFor="toggle-theme"
+        className="absolute h-full w-full cursor-pointer rounded-[50px] bg-white shadow-md transition-colors duration-300 ease-in-out dark:bg-zinc-800"
+      >
         <input
+          name="themes"
+          id="toggle-theme"
+          aria-label={`Use ${currentTheme} Mode`}
           aria-checked={checked}
           checked={checked}
           onChange={() => handleClick()}
