@@ -18,7 +18,7 @@ export default function AuthModal() {
 
   return (
     <Dialog open={isAuthOpen} onOpenChange={handleAuthClose}>
-      <DialogContent className="max-h-[80svh] overflow-y-auto !rounded-[2px] sm:max-w-md">
+      <DialogContent className="max-h-[80svh] w-[calc(100%_-_32px)] overflow-y-auto !rounded-[2px] sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Are you absolutely sure?</DialogTitle>
           <DialogDescription>This action cannot be undone.</DialogDescription>

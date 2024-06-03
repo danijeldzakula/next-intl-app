@@ -45,7 +45,21 @@ export default function NavBar({ hasMobile = false, className }: TProps) {
   return (
     <nav className={clsx(className)}>
       {hasMobile && (
-        <div className="gradient--indigo flex h-16 items-center justify-between px-4">
+        <div className="gradient--indigo grid h-16 grid-cols-[40px_auto] items-center gap-4 px-4">
+          <button
+            type="button"
+            aria-pressed={!isNavbarOpen}
+            className="group relative grid h-10 w-10 items-center justify-center text-white"
+            onClick={handleNavbarClose}
+          >
+            <TimesIcon
+              width={26}
+              height={26}
+              className="transition-transform group-hover:rotate-90"
+            />
+            <span className="sr-only">Close</span>
+          </button>
+
           <NavLink
             href="/"
             onClick={handleRouterClose}
@@ -53,20 +67,6 @@ export default function NavBar({ hasMobile = false, className }: TProps) {
           >
             <span>Creative</span>
           </NavLink>
-
-          <button
-            type="button"
-            aria-pressed={!isNavbarOpen}
-            className="group relative p-2 text-white"
-            onClick={handleNavbarClose}
-          >
-            <TimesIcon
-              width={22}
-              height={22}
-              className="transition-transform group-hover:rotate-90"
-            />
-            <span className="sr-only">Close</span>
-          </button>
         </div>
       )}
 
