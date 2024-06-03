@@ -50,6 +50,7 @@ export default function Footer() {
               <form className="relative my-8 ml-4 grid h-16 w-full rounded-[4px] bg-white lg:m-8 lg:mr-0 xl:my-10 dark:bg-black">
                 <input
                   type="email"
+                  name="newsletter"
                   className="relative w-full rounded-none bg-transparent px-5 text-base tracking-wide text-black md:text-base xl:text-xl dark:text-white"
                   placeholder="Enter email address"
                 />
