@@ -58,10 +58,10 @@ dependencies:
     specifier: ^3.0.0
     version: 3.0.0(sharp@0.33.4)
   react:
-    specifier: ^18.3.1
+    specifier: ^18.2.0
     version: 18.3.1
   react-dom:
-    specifier: ^18.3.1
+    specifier: ^18.2.0
     version: 18.3.1(react@18.3.1)
   sharp:
     specifier: ^0.33.4
