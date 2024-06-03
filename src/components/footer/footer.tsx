@@ -140,7 +140,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-center text-zinc-500">
+          <p className="text-center text-zinc-600 dark:text-zinc-400">
             Copyright {new Date().getFullYear()}. All Rights Reserved.
           </p>
         </div>
