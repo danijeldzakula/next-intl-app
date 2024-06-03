@@ -2,14 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  scroll-padding: 0;
-}
-
 @layer base {
+  :root {
+    scroll-padding: 0;
+
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  body[data-scroll-locked] {
+    overscroll-behavior: contain;
+    @apply !relative !mr-4 ml-0 mt-0 !overflow-hidden pl-0 pr-0 pt-0;
+  }
+
   html {
     touch-action: manipulation;
-    @apply min-h-screen scroll-pt-20  overflow-y-scroll bg-white dark:bg-zinc-900;
+    @apply min-h-screen scroll-pt-20 bg-white dark:bg-zinc-900;
   }
 
   select {
@@ -27,11 +100,11 @@
 
 @layer utilities {
   .gradient--lime {
-    @apply bg-gradient-to-r from-lime-600 to-lime-900;
+    @apply bg-gradient-to-r from-purple-600 to-purple-900;
   }
 
   .gradient--indigo {
-    @apply bg-gradient-to-r from-purple-600 to-purple-900;
+    @apply bg-gradient-to-r from-lime-600 to-lime-900;
   }
 
   .grid__wrapper > .card__item {
@@ -53,4 +126,16 @@
     @apply before:translate-x-[37px] before:bg-white before:shadow-none;
   }
   /* END - Toggle Theme Switch */
+
+  /* .navbar--mobile {
+    @apply fixed bottom-0 left-0 top-0 z-[12] block w-full max-w-sm overflow-y-auto transition-transform duration-300 ease-in-out lg:top-20 lg:hidden;
+  }
+
+  .navbar--desktop {
+    @apply bg-white py-6 lg:bg-transparent lg:py-0 landscape:py-12 lg:landscape:py-0 dark:bg-zinc-900 lg:dark:bg-transparent;
+  } */
+
+  .navbar--mobile {
+    @apply !left-0 !top-0 !block h-full !translate-x-0 !translate-y-0 !rounded-none !border-0 !p-0 data-[state=closed]:!animate-out data-[state=closed]:!fade-out-0 data-[state=closed]:!zoom-out-100 data-[state=open]:!zoom-in-100 data-[state=open]:!slide-in-from-left-0;
+  }
 }

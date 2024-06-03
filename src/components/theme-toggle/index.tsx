@@ -20,7 +20,7 @@ export default function ThemeToggle({ className }: TProps) {
 
   return (
     <div className={clsx('relative h-7 w-16', className)}>
-      <label className="absolute h-full w-full cursor-pointer rounded-[50px] bg-white shadow-md transition-colors duration-[0.4s] ease-in-out dark:bg-zinc-800">
+      <label className="absolute h-full w-full cursor-pointer rounded-[50px] bg-white shadow-md transition-colors duration-300 ease-in-out dark:bg-zinc-800">
         <input
           aria-checked={checked}
           checked={checked}

@@ -24,7 +24,7 @@ export default function LinksToggle({ show = false, title, children }: TProps) {
       <button
         type="button"
         className={clsx(
-          "after:gradient--indigo relative mb-5 flex w-full items-center justify-between text-left text-[20px] text-white after:absolute after:-bottom-2.5 after:left-0 after:clear-both after:h-[2px] after:w-16 after:transition-[width] after:duration-200 after:content-[''] hover:after:w-32 md:hidden",
+          "after:gradient--indigo relative mb-5 flex w-full items-center justify-between text-left text-[20px] text-white after:absolute after:-bottom-2.5 after:left-0 after:clear-both after:h-[2px] after:w-16 after:transition-[width] after:duration-200 after:content-[''] md:hidden",
           isVisible ? 'after:w-32' : ''
         )}
         onClick={handleOpen}

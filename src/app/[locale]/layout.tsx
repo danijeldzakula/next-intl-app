@@ -7,6 +7,7 @@ import { Work_Sans } from 'next/font/google';
 import clsx from 'clsx';
 import NextTopLoader from 'nextjs-toploader';
 
+import AuthModal from '@/components/auth/auth-modal';
 import BackToTop from '@/components/back-to-top';
 import Footer from '@/components/footer/footer';
 import MastHead from '@/components/masthead';
@@ -71,6 +72,7 @@ export default async function LocaleLayout({
 
               <div className="__app__">
                 <MastHead />
+                <AuthModal />
                 {children}
                 <Footer />
                 <BackToTop />
