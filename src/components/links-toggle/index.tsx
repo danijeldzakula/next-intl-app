@@ -36,7 +36,7 @@ export default function LinksToggle({ show = false, title, children }: TProps) {
             !isVisible ? 'rotate-90' : ''
           )}
         >
-          <ArrowIcon />
+          <ArrowIcon width={16} height={16} />
         </span>
       </button>
 
