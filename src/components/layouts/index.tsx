@@ -22,7 +22,11 @@ export function Container({ className, children }: TProps) {
 }
 
 export function Section({ className, children }: TProps) {
-  return <section className={clsx(className)}>{children}</section>;
+  return (
+    <section className={clsx(className)} style={{ contain: 'content' }}>
+      {children}
+    </section>
+  );
 }
 
 export function Article({ className, children }: TProps) {
