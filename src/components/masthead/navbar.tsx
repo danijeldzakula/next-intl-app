@@ -63,9 +63,9 @@ export default function NavBar({ hasMobile = false, className }: TProps) {
           <NavLink
             href="/"
             onClick={handleRouterClose}
-            className="inline-flex w-max !px-0 py-0 text-2xl text-white"
+            className="inline-flex w-max !px-0 py-0 text-2xl !text-white"
           >
-            <span>Creative</span>
+            <span>Story</span>
           </NavLink>
         </div>
       )}
