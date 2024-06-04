@@ -23,7 +23,7 @@ export default function Header() {
   const { isNavbarOpen, handleNavbarOpen } = useMastheadStore();
 
   return (
-    <header className="gradient--indigo sticky left-0 right-0 top-0 z-[11] grid h-16 w-full items-center border-b lg:h-20">
+    <header className="gradient--indigo sticky left-0 right-0 top-0 z-[11] grid h-16 w-full items-center shadow-xl lg:h-20">
       <Container>
         <div className="grid auto-cols-max grid-flow-col items-center justify-between lg:grid-cols-[201px_auto_201px]">
           <div className="grid grid-cols-[40px_auto] items-center gap-4">

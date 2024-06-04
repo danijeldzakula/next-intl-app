@@ -15,7 +15,8 @@
     "analyze": "ANALYZE=true next build",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "code:start": "code . && next dev"
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^10.2.7",
