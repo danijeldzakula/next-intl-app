@@ -11,10 +11,13 @@ import galleryFour from '@public/images/seo/opengraph-image.jpg';
 import { Container, Section } from '@/components/layouts';
 
 import { Link } from '@/navigation';
+import { type TGlobalProps } from '@/types';
 
-export default function Gallery() {
+type TProps = TGlobalProps;
+
+export default function Gallery({ className }: TProps) {
   return (
-    <Section>
+    <Section className={className}>
       <Container>
         <div className="h-full">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6 xl:gap-8">

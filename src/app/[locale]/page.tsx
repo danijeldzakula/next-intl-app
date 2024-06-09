@@ -6,6 +6,7 @@ import { type TParamsLocale } from '@/types';
 
 import Gallery from './(sections)/gallery';
 import Hero from './(sections)/hero';
+import SearchBlock from './(sections)/search-block';
 
 type TProps = TParamsLocale;
 
@@ -21,6 +22,7 @@ export async function generateMetadata({ params: { locale } }: TProps) {
 export default function IndexPage() {
   return (
     <Layout>
+      <SearchBlock />
       <Hero className="hidden" />
       <Gallery />
     </Layout>

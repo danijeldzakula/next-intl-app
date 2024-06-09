@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { ThemeProvider } from 'next-themes';
 import { Work_Sans } from 'next/font/google';
+import Script from 'next/script';
 
 import clsx from 'clsx';
 import NextTopLoader from 'nextjs-toploader';
@@ -63,9 +64,14 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html suppressHydrationWarning={true} lang={locale}>
+    <html suppressHydrationWarning={true} lang={locale} className="dark">
       <body className={clsx(workSans.className)}>
-        <ThemeProvider enableSystem={true} attribute="class">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={true}
+          disableTransitionOnChange={true}
+        >
           <NextIntlClientProvider messages={messages}>
             <QueryProvider>
               <NextTopLoader color="white" height={3} showSpinner={false} />
@@ -80,6 +86,13 @@ export default async function LocaleLayout({
             </QueryProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
+
+        <Script
+          id="scoll-restoration"
+          dangerouslySetInnerHTML={{
+            __html: `history.scrollRestoration = "manual"`,
+          }}
+        />
       </body>
     </html>
   );

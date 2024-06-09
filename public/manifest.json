@@ -2,11 +2,17 @@
   "theme_color": "#412203",
   "background_color": "#f69435",
   "display": "standalone",
-  "orientation": "portrait",
+  "orientation": "any",
   "scope": "/",
   "start_url": "/",
-  "name": "next-pwa-app",
-  "short_name": "pwaapp",
+  "name": "Story App",
+  "short_name": "Story",
+  "serviceworker": {
+    "src": "sw.js",
+    "scope": "/",
+    "use_cache": true
+  },
+  "permissions": ["geolocation", "downloads", "storage"],
   "icons": [
     {
       "src": "/icon-192x192.png",
