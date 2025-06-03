@@ -7,7 +7,7 @@ import { Container, Layout, Section } from '@/components/layouts';
 
 type TProps = {
   error: Error;
-  reset(): void;
+  reset: () => void;
 };
 
 export default function Error({ error, reset }: TProps) {
